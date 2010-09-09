@@ -191,9 +191,7 @@ so when user clicks on your button the normal file selection window is shown.
 And after user selects a file, plugin submits form that contains file input to an iframe.
 It isn't true ajax upload, but brings the same user experience.
 
-### Licensing &amp; Terms of Use ###
-
-AJAX upload plugin is completely free and licensed under MIT license
+### License ###
 
  Copyright (c) 2010 Andrew Valums  
 

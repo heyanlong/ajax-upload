@@ -1,7 +1,7 @@
-##### Important! #####
 I suggest you to use a newer [qq.FileUploader plugin](http://valums.com/ajax-upload/)
 instead, which adds a couple of new options and features, and fixes some bugs.
 
+### AJAX Upload ###
 
 Browsers force us to use file inputs (&lt;input type="file" /&gt;) for uploads,
 which are impossible to style. Moreover, form-based uploads look obsolete in modern

@@ -1,14 +1,22 @@
-Browsers force us to use file inputs (&lt;input type="file" /&gt;) for uploads, which are impossible to style. Moreover, form-based uploads look obsolete in modern web applications. We can use flash to solve this problem, but JavaScript works nice too.
+    I suggest you to use a newer qq.FileUploader plugin (http://valums.com/ajax-upload/)
+    instead, which adds a couple of new options and features, and fixes some bugs.
 
-**AJAX Upload** allows you to easily upload multiple files without refreshing the page and use any element to show file selection window. It works in all major browsers and doesn't require any library to run. AJAX Upload doesn't pollute the global namespace, and is tested with jQuery, Prototypejs.
+Browsers force us to use file inputs (&lt;input type="file" /&gt;) for uploads,
+which are impossible to style. Moreover, form-based uploads look obsolete in modern
+web applications. We can use flash to solve this problem, but JavaScript works nice too.
 
-## Demo ##
-Here is an example for <a href="http://valums.com/wp-content/uploads/ajax-upload/demo-jquery.htm">AJAX Upload</a> used with jQuery.
+**AJAX Upload** allows you to easily upload multiple files without refreshing the page
+and use any element to show file selection window. It works in all major browsers
+and doesn't require any library to run. AJAX Upload doesn't pollute the global namespace,
+and is tested with jQuery, Prototypejs.
 
-## Supported browsers ##
-IE6 - IE8, FF2 - 3.5, Safari4, Chrome3, Opera 9.64 - 10
+### Demo ###
+Here is an example for <a href="http://valums.com/files/2009/ajax-upload/demo-jquery.htm">AJAX Upload</a> used with jQuery.
 
-## How to use it? ##
+### Supported browsers ###
+IE6 - IE8, FF2 - 4, Safari, Chrome, Opera
+
+### How to use it? ###
 
 ### Creating the uploader ###
 
@@ -61,7 +69,9 @@ Next, you should create ajax upload instance. In it’s simplest form, you can c
       onComplete: function(file, response) {}
     });
 
-Note: Do not use the data parameter to attach dynamic data, like this "data: {txt: textfield.value}", because it will assign data when the instance of the AJAX Upload is created and will not change later. If you want to pass additional data from textfields use setData method in a onSubmit callback.
+Note: Do not use the data parameter to attach dynamic data, like this "data: {txt: textfield.value}",
+because it will assign data when the instance of the AJAX Upload is created and will not change later.
+If you want to pass additional data from textfields use setData method in a onSubmit callback.
 
 Instance methods
 
@@ -87,7 +97,8 @@ You can use these methods, to configure <em>AJAX Upload</em> later.
     });
 
 ### How do I access the uploaded files? ###
-For the server-side code it looks like the file is uploaded with the simple upload form, because of that you can use any language you want.
+For the server-side code it looks like the file is uploaded with
+the simple upload form, so it shouldn't be a problem.
 
 You can access the uploaded file with:
 
@@ -155,7 +166,9 @@ And here is an ASPX handler, please modify it to suit your needs:
     
 ### How to allow only certain file types? ###
 
-The best way is to check the file type of selected function in a onSubmit callback function and return false to cancel upload if invalid file is selected. But don't forget to add a server-side check for security.
+The best way is to check the file type of selected file in a onSubmit
+callback and return false to cancel upload if invalid file is selected.
+But don't forget to add a server-side check too.
 
     new AjaxUpload('button2', {
         action: 'upload.php',
@@ -170,11 +183,33 @@ The best way is to check the file type of selected function in a onSubmit callba
     });
 
     
-## How it works? ##
+### How it works? ###
 
-Plugin creates invisible file input on top of the button you provide, so when user clicks on your button the normal file selection window is shown. And after user selects a file, plugin submits form that contains file input to an iframe. So it isn't true ajax upload, but brings same user experience.
+Plugin places transparent file input on top of the button you provide,
+so when user clicks on your button the normal file selection window is shown.
+And after user selects a file, plugin submits form that contains file input to an iframe.
+It isn't true ajax upload, but brings the same user experience.
 
+### Licensing &amp; Terms of Use ###
 
-## Licensing &amp; Terms of Use ##
+AJAX upload plugin is completely free and licensed under MIT license
 
-Ajax upload plugin is completely free and licensed under <a rel="nofollow" href="http://valums.com/mit-license">MIT license</a>
+ Copyright (c) 2010 Andrew Valums
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.

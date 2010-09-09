@@ -1,23 +1,9 @@
 /**
  * AJAX Upload ( http://valums.com/ajax-upload/ ) 
- * Copyright (c) Andris Valums
- * Licensed under the MIT license ( http://valums.com/mit-license/ )
- * Thanks to Gary Haran, David Mark, Corey Burns and others for contributions. 
+ * Copyright (c) Andrew Valums
+ * Licensed under the MIT license 
  */
 (function () {
-    /* global window */
-    /* jslint browser: true, devel: true, undef: true, nomen: true, bitwise: true, regexp: true, newcap: true, immed: true */
-    
-    /**
-     * Wrapper for FireBug's console.log
-     */
-    function log(){
-        if (typeof(console) != 'undefined' && typeof(console.log) == 'function'){            
-            Array.prototype.unshift.call(arguments, '[Ajax Upload]');
-            console.log( Array.prototype.join.call(arguments, ' '));
-        }
-    } 
-
     /**
      * Attaches event to a dom element.
      * @param {Element} el

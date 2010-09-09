@@ -7,13 +7,12 @@ Browsers force us to use file inputs (&lt;input type="file" /&gt;) for uploads,
 which are impossible to style. Moreover, form-based uploads look obsolete in modern
 web applications. We can use flash to solve this problem, but JavaScript works nice too.
 
-**AJAX Upload** allows you to easily upload multiple files without refreshing the page
+AJAX Upload allows you to easily upload multiple files without refreshing the page
 and use any element to show file selection window. It works in all major browsers
 and doesn't require any library to run. AJAX Upload doesn't pollute the global namespace,
 and is tested with jQuery, Prototypejs.
 
-### Demo ###
-Here is an example for <a href="http://valums.com/files/2009/ajax-upload/demo-jquery.htm">AJAX Upload</a> used with jQuery.
+### <a href="http://valums.com/files/2009/ajax-upload/demo-jquery.htm">Demo</a> ###
 
 ### Supported browsers ###
 IE6 - IE8, FF2 - 4, Safari, Chrome, Opera
